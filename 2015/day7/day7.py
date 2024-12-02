@@ -1,12 +1,64 @@
-puzzleinput :str        # done to initialize an empty variable, without the :str it would be an error
-with open('2015/day7/day7.txt', 'r') as file:
-    puzzleinput = file.read()
+# Credits to TessFerrandez on Github since my own attempts  to solve this did not work
+# Link to Github: https://github.com/TessFerrandez/AdventOfCode-Python/blob/develop/2015/day7.py
 
-def part1():
-    print()
 
-def part2():
-    print()
+CIRCUIT = {}
+EVALUATED = {}
 
-part1()
-part2()
+
+def parse_input(filename: str):
+    lines = [line.strip() for line in open(filename)]
+
+    for line in lines:
+        ops, wire = line.split(' -> ')
+        CIRCUIT[wire] = ops.split(' ')
+
+
+def evaluate(wire: str) -> int:
+    try:
+        return int(wire)
+    except ValueError:
+        pass
+
+    result = 0
+    if wire not in EVALUATED:
+        ops = CIRCUIT[wire]
+
+        # single value
+        if len(ops) == 1:
+            result = evaluate(ops[0])
+        else:
+            op = ops[-2]
+            if op == 'AND':
+                result = evaluate(ops[0]) & evaluate(ops[2])
+            if op == 'OR':
+                result = evaluate(ops[0]) | evaluate(ops[2])
+            if op == 'NOT':
+                result = ~evaluate(ops[1]) & 0xFFFF
+            if op == 'RSHIFT':
+                result = evaluate(ops[0]) >> evaluate(ops[2])
+            if op == 'LSHIFT':
+                result = evaluate(ops[0]) << evaluate(ops[2])
+        EVALUATED[wire] = result
+    return EVALUATED[wire]
+
+
+def part1() -> int:
+    return evaluate('a')
+
+
+def part2() -> int:
+    a = EVALUATED['a']
+    EVALUATED.clear()
+    EVALUATED['b'] = a
+    return evaluate('a')
+
+
+def main():
+    parse_input('2015/day7/day7.txt')
+    print(f'Part 1: {part1()}')
+    print(f'Part 2: {part2()}')
+
+
+if __name__ == "__main__":
+    main()
