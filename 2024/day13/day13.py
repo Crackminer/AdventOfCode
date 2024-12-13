@@ -31,7 +31,6 @@ def subtractlist(list :list, list2 :list) -> list:
     return returnlist
 
 def getsum(block :list, a :int = 0, b :int = 0) -> int:
-    sum = 0
     suma = 0
     sumb = 0
     if a != 100 and comparenotbelowzero(subtractlist(block[2], block[0])):
@@ -44,7 +43,7 @@ def getsum(block :list, a :int = 0, b :int = 0) -> int:
         sumb = getsum(newblock, a, b+1)
     if suma < sumb:
         return suma
-    return sum
+    return sumb
 
 def part1():
     input = testinput
@@ -68,6 +67,7 @@ def part1():
     sum = 0
     for block in blocks:
         sum += getsum(block)
+        print('got a new total sum: ' + str(sum))
     print(sum)
 
 def part2():
