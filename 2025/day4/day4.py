@@ -1,5 +1,5 @@
 puzzleinput :str        # done to initialize an empty variable, without the :str it would be an error
-with open('2025/day19/day19.txt', 'r') as file:
+with open('2025/day4/day4.txt', 'r') as file:
     puzzleinput = file.read()
 
 testinput = """"""
