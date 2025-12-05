@@ -18,13 +18,10 @@ def invalid(num :int) -> bool:
 def invalidPart2(num :int) -> bool:
     strnum = str(num)
 
-    res = False
-
     for i in range(1, len(strnum)):
         if len(strnum) % i == 0 and strnum[:i] * (len(strnum) // i) == strnum:
-            res = True
-            break
-    return res
+            return True
+    return False
 
 
 def part1():
