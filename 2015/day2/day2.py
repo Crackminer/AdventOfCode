@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2015/day2/day2.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 def part1():
     totalwrappingpaper = 0
     for line in puzzleinput.split('\n'):
@@ -62,5 +64,9 @@ def part2():
 
     print(f'The total amount of ribbon needed is {totalribbon}')
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

@@ -3,6 +3,7 @@ with open('2025/day8/day8.txt', 'r') as file:
     puzzleinput = file.read()
 
 import math
+from datetime import datetime
 
 testinput = """162,817,812
 57,618,57
@@ -140,5 +141,9 @@ def part1():
 def part2():
     print(p2)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

@@ -1,4 +1,5 @@
 import functools
+from datetime import datetime
 
 puzzleinput :str        # done to initialize an empty variable, without the :str it would be an error
 with open('2024/day11/day11.txt', 'r') as file:
@@ -60,6 +61,9 @@ def part2():
         list.append(int(numstring))
     print(sum(countsplits(num, 75) for num in list))
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
-print('\n\n\n')
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

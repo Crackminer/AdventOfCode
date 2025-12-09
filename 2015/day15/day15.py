@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2015/day15/day15.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 def getinputlist(input :str) -> list:
     list = []
     for line in input.split('\n'):
@@ -64,5 +66,9 @@ def part2():
 
     print(bestscore)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

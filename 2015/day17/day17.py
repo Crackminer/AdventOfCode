@@ -1,4 +1,5 @@
 import itertools
+from datetime import datetime
 
 puzzleinput :str        # done to initialize an empty variable, without the :str it would be an error
 with open('2015/day17/day17.txt', 'r') as file:
@@ -37,5 +38,9 @@ def part2():
                 combos.append(combo)
     print(len(combos))
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

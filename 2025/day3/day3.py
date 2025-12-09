@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2025/day3/day3.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 testinput = """987654321111111
 811111111111119
 234234234234278
@@ -35,5 +37,9 @@ def part1():
 def part2():
     meanFunc(12)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

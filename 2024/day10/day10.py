@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2024/day10/day10.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 testinput = """89010123
 78121874
 87430965
@@ -82,5 +84,9 @@ def part2():
     print(sumupp2(hike))
     print()
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2024/day6/day6.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 # my part 2 was not working, once again thanks to TessFerrandez i was able to finish this. Part 1 i was able to finish myself though, Luckily.
 # Github of TessFerrandez: https://github.com/TessFerrandez/AdventOfCode-Python/blob/develop/2024/day6.py
 
@@ -156,4 +158,9 @@ data = puzzleinput
 obstacles, start, width, height = parse(data)
 print('Part2:', part2(obstacles, start, width, height))
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
+#part2()
+print(f"{datetime.now()}: Ended executing part2.")

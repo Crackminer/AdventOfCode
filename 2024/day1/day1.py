@@ -1,5 +1,7 @@
 testinput = """3   4\n4   3\n2   5\n1   3\n3   9\n3   3"""
 
+from datetime import datetime
+
 def part1():
     input = testinput
     with open('2024/day1/day1.txt', 'r') as file:
@@ -47,5 +49,9 @@ def part2():
     print(f"The total similarities are {similarities}")
 
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

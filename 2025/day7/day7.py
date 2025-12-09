@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2025/day7/day7.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 testinput = """.......S.......
 ...............
 .......^.......
@@ -45,5 +47,9 @@ def part1():
 def part2():
     print(sharedFunc()[1])
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

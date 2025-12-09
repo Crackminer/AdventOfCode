@@ -1,5 +1,7 @@
 from itertools import permutations
 
+from datetime import datetime
+
 puzzleinput :str        # done to initialize an empty variable, without the :str it would be an error
 with open('2015/day13/day13.txt', 'r') as file:
     puzzleinput = file.read()
@@ -66,5 +68,9 @@ def part2():
 
     print(totalhappiness)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

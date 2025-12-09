@@ -1,6 +1,9 @@
 puzzleinput :str        # done to initialize an empty variable, without the :str it would be an error
 with open('2015/day18/day18.txt', 'r') as file:
     puzzleinput = file.read()
+    
+from datetime import datetime
+
 # fuck this, idk why it isnt working but somehow it isnt working
 def initialstate(input :str) -> list:
     list = []

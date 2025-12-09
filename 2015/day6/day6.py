@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2015/day6/day6.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 def initarray():
     array = []
     for i in range(0, 1000):
@@ -93,5 +95,9 @@ def part2():
             totalbrightness += startingarray[i][j]
     print(f"the total brightness of the lights is {totalbrightness}")
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

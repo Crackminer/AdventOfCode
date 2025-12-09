@@ -1,6 +1,8 @@
 # Credits to TessFerrandez on Github since my own attempts  to solve this did not work
 # Link to Github: https://github.com/TessFerrandez/AdventOfCode-Python/blob/develop/2015/day7.py
 
+from datetime import datetime
+
 
 CIRCUIT = {}
 EVALUATED = {}

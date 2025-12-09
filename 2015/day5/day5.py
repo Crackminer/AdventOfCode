@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2015/day5/day5.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 def part1():
     naughtybits = ["ab", "cd", "pq", "xy"]
 
@@ -81,5 +83,9 @@ def part2():
     
     print(f"The amount of nice string is {nicestringcount}")
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

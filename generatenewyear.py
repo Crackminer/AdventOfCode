@@ -12,6 +12,8 @@ for i in range(1, 13):
 with open('{year}/day{i}/day{i}.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 testinput = """"""
 
 def part1():
@@ -22,7 +24,11 @@ def part2():
     # puzzleinput = testinput
     print()
 
+print(f"{{datetime.now()}}: Started executing part1.")
 part1()
-part2()''')
+print(f"{{datetime.now()}}: Ended executing part1.")
+print(f"{{datetime.now()}}: Started executing part2.")
+part2()
+print(f"{{datetime.now()}}: Ended executing part2.")''')
     with open(f'{year}/day{i}/day{i}.txt', 'w+') as txtfile:
         continue

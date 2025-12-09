@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2024/day3/day3.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 # heavily modified the day3.txt input, made newline before each mul and do, which significantly simplifies the task
 
 def part1():
@@ -51,5 +53,9 @@ def part2():
             do = False
     print(sum)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

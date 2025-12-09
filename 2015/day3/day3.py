@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2015/day3/day3.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 def part1():
     map = [[[0, 0], 1]]
 
@@ -83,5 +85,9 @@ def part2():
 
     print(f"Santa and his Robot found a total of {len(map)} houses.")
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

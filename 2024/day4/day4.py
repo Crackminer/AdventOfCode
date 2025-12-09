@@ -2,6 +2,8 @@ puzzleinput :str        # done to initialize an empty variable, without the :str
 with open('2024/day4/day4.txt', 'r') as file:
     puzzleinput = file.read()
 
+from datetime import datetime
+
 #puzzleinput = """MMMSXXMASM\nMSAMXMSMSA\nAMXSXMAAMM\nMSAMASMSMX\nXMASAMXAMM\nXXAMMXXAMA\nSMSMSASXSS\nSAXAMASAAA\nMAMMMXMMMM\nMXMXAXMASX"""
 
 def starsearch(list :list) -> int:
@@ -101,5 +103,9 @@ def part2():
     xmascount += xshapedmassearch(input)
     print(xmascount)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")

@@ -2,6 +2,8 @@
 def parse_input():
     return [line.strip() for line in open('2015/day8/day8.txt').readlines()]
 
+from datetime import datetime
+
 def part1():
     input = parse_input()
     countfull = 0
@@ -24,5 +26,9 @@ def part2():
         countfuller += 2
     print(countfuller - countfull)
 
+print(f"{datetime.now()}: Started executing part1.")
 part1()
+print(f"{datetime.now()}: Ended executing part1.")
+print(f"{datetime.now()}: Started executing part2.")
 part2()
+print(f"{datetime.now()}: Ended executing part2.")
